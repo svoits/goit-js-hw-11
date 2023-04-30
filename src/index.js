@@ -14,6 +14,11 @@ const loadMoreBtn = new LoadMoreBtn({
   hidden: true,
 });
 
+const options = {
+  rootMargin: '300px',
+};
+const observer = new IntersectionObserver(onLoad, options);
+
 refs.searchForm.addEventListener('submit', onSearch);
 loadMoreBtn.refs.button.addEventListener('click', onLoadMore);
 
@@ -88,11 +93,6 @@ async function loadMoreImages() {
   smoothScroll();
   lightbox.refresh();
 }
-
-const options = {
-  rootMargin: '300px',
-};
-const observer = new IntersectionObserver(onLoad, options);
 
 function onLoad(entries, observer) {
   entries.forEach(async entry => {
