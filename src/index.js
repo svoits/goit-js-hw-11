@@ -56,7 +56,7 @@ async function searchImages() {
   lightbox.refresh();
 }
 
-// IF YOU WANT TO TEST LOAD MORE BTN - JUST COMMENT 88 LINE.
+// IF YOU WANT TO TEST LOAD MORE BTN - JUST COMMENT 51 LINE.
 
 function onLoadMore() {
   imagesServiceAPI.incrementPage();
